@@ -1,5 +1,7 @@
 (channel
  (version 0)
+ (url "https://github.com/WellIDKRealy/private-guix-channel.git")
+ (directory "guix")
  (depedencies
   (channel
    (name 'guix)
