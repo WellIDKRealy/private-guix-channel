@@ -1,0 +1,27 @@
+(use-modules
+ (guix packages)
+ (gnu packages emacs))
+
+(define-public emacs-myemacs
+  (package
+    (inherit emacs-next)
+    (name "emacs-myemacs")
+    (source
+     (origin
+       (inherit (package-source emacs-next))
+       (patches
+        (append (search-patches "emacs-pgtk-super-key-fix.patch")
+                (origin-patches (package-source emacs-next))))))
+    (arguments
+     (substitute-keyword-arguments (package-arguments emacs-next)
+       ((#:configure-flags flags #~'())
+        #~(cons* "--with-pgtk" "--with-xwidgets" #$flags))))
+    (propagated-inputs
+     (list gsettings-desktop-schemas glib-networking))
+    (inputs
+     (modify-inputs (package-inputs emacs-next)
+       (prepend webkitgtk-with-libsoup2)))
+    (home-page "https://github.com/masm11/emacs")
+    (synopsis "Emacs text editor with @code{pgtk}, @code{treesitter} and @code{xwidgets} support")
+    (description "This Emacs build implements graphical UI purely in terms of
+GTK and also enables xwidgets.")))

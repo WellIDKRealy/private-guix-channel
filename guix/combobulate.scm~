@@ -1,0 +1,6 @@
+(package
+ (name "emacs-combobulate")
+ (version "0.1")
+ (source (origin
+	  (method git-fetch)
+	  (uri (string-append )))))
