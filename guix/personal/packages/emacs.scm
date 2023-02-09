@@ -73,7 +73,7 @@
 Emacs commands, such as `find-file` and `switch-to-buffer`. Ivy is a
 completion framework for Emacs that provides a more efficient and
 user-friendly way to search and select from a list of options.")
-    (license license:gpl3+)))
+    (license gpl3+)))
 
 
 
