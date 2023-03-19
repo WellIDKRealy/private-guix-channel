@@ -6,5 +6,3 @@
   #:use-module (guix status)
   #:use-module (guix build-system trival)
   #:use-module (guix licenses))
-)
-
