@@ -4,6 +4,7 @@
   #:use-module (guix gexp)
   #:use-module (guix download)
   #:use-module (guix status)
+  #:use-module (gnu packages tree-sitter)
   #:use-module (gnu packages text-editors)
   #:use-module (gnu packages emacs)
   #:use-module (gnu packages emacs-xyz)
