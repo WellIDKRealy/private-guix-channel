@@ -4,5 +4,5 @@
   #:use-module (guix gexp)
   #:use-module (guix download)
   #:use-module (guix status)
-  #:use-module (guix build-system trival)
+  #:use-module (guix build-system trivial)
   #:use-module (guix licenses))
