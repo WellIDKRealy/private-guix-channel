@@ -17,10 +17,15 @@
   (package i2pd-configuration-package
 	   (default i2pd))
   ;; List of strings
-  (tunnels (i2pd-configuration-tunnels
-	    (default '()))))
+  (tunnels i2pd-configuration-tunnels
+	   (default '())))
 
-(define )
+(define-record-type <i2pd-tunnel>
+  (i2pd-tunnel type)
+  i2pd-tunnel?
+  (type i2pd-tunnel-type))
+
+(define-record-type )
 
 (define (i2pd-configuration->string config)
   "")
