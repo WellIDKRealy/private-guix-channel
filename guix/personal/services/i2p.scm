@@ -6,7 +6,6 @@
   #:use-module (gnu packages i2p)
   #:use-module (guix gexp)
   #:use-module (guix records)
-  #:use-module (srfi srfi-9)
   #:export (i2pd-service-type
 	    i2pd-configuration
 	    i2pd-configuration?))
@@ -16,16 +15,9 @@
   ip2d-configuration?
   (package i2pd-configuration-package
 	   (default i2pd))
-  ;; List of strings
+  ;; List of children classes of <i2pd-tunnel> class
   (tunnels i2pd-configuration-tunnels
 	   (default '())))
-
-(define-record-type <i2pd-tunnel>
-  (i2pd-tunnel type)
-  i2pd-tunnel?
-  (type i2pd-tunnel-type))
-
-(define-record-type )
 
 (define (i2pd-configuration->string config)
   "")
