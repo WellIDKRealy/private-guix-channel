@@ -6,6 +6,7 @@
   #:use-module (gnu packages i2p)
   #:use-module (guix gexp)
   #:use-module (guix records)
+  #:use-module (srfi srfi-9)
   #:export (i2pd-service-type
 	    i2pd-configuration
 	    i2pd-configuration?))
@@ -14,7 +15,12 @@
   i2pd-configuration make-i2pd-configuration
   ip2d-configuration?
   (package i2pd-configuration-package
-	   (default i2pd)))
+	   (default i2pd))
+  ;; List of strings
+  (tunnels (i2pd-configuration-tunnels
+	    (default '()))))
+
+(define )
 
 (define (i2pd-configuration->string config)
   "")
@@ -27,7 +33,7 @@
 	     (provision '(i2pd))
 	     (documentation "TODO")
 	     (requirement '(user-processes networking))
-	     (start #~(make-forexec-constructor
+	     (start #~(make-forkexec-constructor
 		       (list (string-append #$package "/bin/i2pd")
 			     "-conf" #$i2pd.conf)
 		       #:log-file "/var/log/i2pd.log"))
