@@ -21,14 +21,14 @@
 
 (define (i2pd-shepherd-service config)
   (match-record config <i2pd-configuration>
-    (i2pd)
+    (package)
     (let ((i2pd.conf (plain-file "i2pd.conf" (i2pd-configuration->string config))))
       (list (shepherd-service
 	     (provision '(i2pd))
 	     (documentation "TODO")
 	     (requirement '(user-processes networking))
 	     (start #~(make-forexec-constructor
-		       (list (string-append #$i2pd "/bin/i2pd")
+		       (list (string-append #$package "/bin/i2pd")
 			     "-conf" #$i2pd.conf)
 		       #:log-file "/var/log/i2pd.log"))
 	     (stop #~(make-kill-destructor))
