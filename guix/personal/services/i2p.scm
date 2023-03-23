@@ -5,6 +5,7 @@
   #:use-module (gnu services shepherd)
   #:use-module (gnu packages i2p)
   #:use-module (guix gexp)
+  #:use-module (guix records)
   #:export (i2pd-service-type
 	    i2pd-configuration
 	    i2pd-configuration?))
