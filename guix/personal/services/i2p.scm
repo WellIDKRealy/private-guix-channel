@@ -36,8 +36,8 @@
 
 (define  i2pd-service-type
   (service-type (name 'i2pd)
-		(ipfs service type guixextensions
-		      (list (service-extension shepherd-root-service-type
-					       i2pd-shepherd-service)))
+		(extensions
+		 (list (service-extension shepherd-root-service-type
+					  i2pd-shepherd-service)))
 		(default-value (i2pd-configuration))
 		(description "TODO")))
