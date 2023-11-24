@@ -16,12 +16,14 @@
 (define-public comobulate
   (package
    (name "emacs-combobulate")
-   (version "0.1")
+   (version "0.2")
    (source (origin
-	    (method url-fetch)
-	    (uri "https://github.com/mickeynp/combobulate/archive/d77698886127fd0da5e5e6186780e16e24b5ae7f.zip")
+	    (method git-fetch)
+	    (uri (git-reference
+		  (url "https://github.com/mickeynp/combobulate.git")
+		  (commit "c7e4670a3047c0b58dff3746577a5c8e5832cfba")))
 	    (sha256
-	     (base32 "0yp7zzvjbn49jaalx2gkgvxniqsg9xzc5h06kqramcj5s5l6s1qh"))))
+	     (base32 "10fdzkkhsig7482in33i20mfady71bgm9k0dyncqsf1wzf6kn2nr"))))
    (build-system emacs-build-system)
    (native-inputs (list unzip))
    (arguments (list #:emacs emacs-tree-sitter))
