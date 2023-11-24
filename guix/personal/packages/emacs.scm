@@ -13,26 +13,6 @@
   #:use-module (guix licenses))
 
 
-(define-public emacs-tree-sitter
-  (package
-   (inherit emacs-next)
-   (name "emacs-tree-sitter")
-   (source
-    (origin
-     (inherit (package-source emacs-next))
-     (patches
-      (origin-patches (package-source emacs-next)))))
-   (arguments
-    (substitute-keyword-arguments (package-arguments emacs-next)
-				  ((#:configure-flags flags #~'())
-				   #~(cons* "--with-tree-sitter" #$flags))))
-   (inputs
-    (modify-inputs (package-inputs emacs-next)
-		   (append tree-sitter)))
-   ;;(home-page "https://github.com/masm11/emacs")
-   (synopsis "Emacs text editor with @code{tree-sitter} support")
-   (description "Emacs build with tree sitter.")))
-
 (define-public comobulate
   (package
    (name "emacs-combobulate")
