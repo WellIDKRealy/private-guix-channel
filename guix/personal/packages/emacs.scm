@@ -3,6 +3,7 @@
   #:use-module (guix utils)
   #:use-module (guix gexp)
   #:use-module (guix download)
+  #:use-module (guix git-download)
   #:use-module (guix status)
   #:use-module (gnu packages tree-sitter)
   #:use-module (gnu packages text-editors)
@@ -34,5 +35,25 @@
    (home-page "https://github.com/mickeynp/combobulate")
    (license gpl3+)))
 
-
+(define-public emacs-zoom
+  (package
+   (name "emacs-zoom")
+   (version "20220411.1126")
+   (source (origin
+            (method git-fetch)
+            (uri (git-reference
+                  (url "https://github.com/cyrus-and/zoom.git")
+                  (commit "2104abb074682db79b9ff3a748e8e2e760a4d8cf")))
+            (sha256
+             (base32
+              "0wp7a1ibyqll8rpirsiazpf51lnd0q3yrya9pqvlx9ik5r41jp2m"))))
+   (build-system emacs-build-system)
+   (home-page "https://github.com/cyrus-and/zoom")
+   (synopsis "Fixed and automatic balanced window layout")
+   (description
+    "This minor mode takes care of managing the window sizes by enforcing a fixed and
+automatic balanced layout where the currently selected window is resized
+according to `zoom-size which can be an absolute value in lines/columns, a ratio
+between the selected window and frame size or even a custom callback.")
+   (license #f)))
 
