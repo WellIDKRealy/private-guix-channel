@@ -17,7 +17,7 @@
 		  (url "https://github.com/WellIDKRealy/network-convinience-commands.git")
 		  (commit "91c742a305a62edd857511ecb6b69fbf198edeb9")))
 	    (sha256
-	     (base32 "14pdi0kn71p139vx503kj70grq8938rnh2rdvrq1dw062g2q9s8p"))))
+	     (base32 "0vz5mpbaqrrdh309ggbqi108423g30fgg1if8hs97hcvd31ycprv"))))
    (build-system copy-build-system)
    (arguments
     '(#:install-plan

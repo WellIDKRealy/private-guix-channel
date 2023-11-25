@@ -25,7 +25,7 @@
 		  (url "https://github.com/mickeynp/combobulate.git")
 		  (commit "c7e4670a3047c0b58dff3746577a5c8e5832cfba")))
 	    (sha256
-	     (base32 "10fdzkkhsig7482in33i20mfady71bgm9k0dyncqsf1wzf6kn2nr"))))
+	     (base32 "063w2sm0c7xhg3ml31xp870azb0sv7z689lnbnjnbl3rfdy4kg50"))))
    (build-system emacs-build-system)
    (native-inputs (list unzip))
    ;; (arguments (list #:emacs emacs-tree-sitter))
