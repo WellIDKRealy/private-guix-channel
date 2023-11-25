@@ -15,7 +15,7 @@
 		#:prefix license:))
 
 
-(define-public combobulate
+(define-public emacs-combobulate
   (package
    (name "emacs-combobulate")
    (version "0.2")
@@ -28,7 +28,7 @@
 	     (base32 "10fdzkkhsig7482in33i20mfady71bgm9k0dyncqsf1wzf6kn2nr"))))
    (build-system emacs-build-system)
    (native-inputs (list unzip))
-   (arguments (list #:emacs emacs-tree-sitter))
+   ;; (arguments (list #:emacs emacs-tree-sitter))
    (synopsis "Structured Editing and Navigation in Emacs")
    (description
     "Combobulate is a package that adds structured editing and movement to a wide range of programming languages.
