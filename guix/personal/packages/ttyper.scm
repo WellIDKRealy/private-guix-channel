@@ -1,5 +1,5 @@
 (define-module (personal packages ttyper)
-  #:use-module (guix package)
+  #:use-module (guix packages)
   #:use-module (guix download)
   #:use-module (guix build-system cargo)
   #:use-module (gnu packages crates-io)
