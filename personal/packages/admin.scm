@@ -1,5 +1,8 @@
 (define-module (personal packages admin)
   #:use-module (guix packages)
+  #:use-module (guix packages bash)
+  #:use-module (guix packages admin)
+  #:use-module (guix packages linux)
   #:use-module (guix utils)
   #:use-module (guix gexp)
   #:use-module (guix build-system copy)
@@ -19,6 +22,7 @@
 	    (sha256
 	     (base32 "0vz5mpbaqrrdh309ggbqi108423g30fgg1if8hs97hcvd31ycprv"))))
    (build-system copy-build-system)
+   (inputs (list bash inetutils procps))
    (arguments
     '(#:install-plan
       '(("cnet" "bin/")
