@@ -15,7 +15,7 @@
 		#:prefix license:))
 
 
-(define-public comobulate
+(define-public combobulate
   (package
    (name "emacs-combobulate")
    (version "0.2")
