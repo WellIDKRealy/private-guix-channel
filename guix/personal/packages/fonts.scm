@@ -7,7 +7,7 @@
 
 (define-public oldshool-pc-fonts
   (package
-   (name "font-flexi-ibm-vga")
+   (name "oldschool-pc-fonts")
    (version "2.0")
    (source (origin
 	    (method url-fetch)
