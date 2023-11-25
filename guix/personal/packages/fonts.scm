@@ -1,5 +1,5 @@
 (define-module (personal packages fonts)
-  #:use-module (guix package)
+  #:use-module (guix packages)
   #:use-module (guix download)
   #:use-module (guix build-system font)
   #:use-module ((guix licenses)
@@ -19,4 +19,3 @@
    (synopsis "Old school pc fonts")
    (description "The world's biggest collection of classic text mode fonts, system fonts and BIOS fonts from DOS-era IBM PCs and compatibles - preserving raster typography from pre-GUI times")
    (license license:gpl3+)))
-
