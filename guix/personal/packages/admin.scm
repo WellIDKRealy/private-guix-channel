@@ -14,9 +14,9 @@
 	      (method git-fetch)
 	      (uri (git-reference
 		    (url "https://github.com/WellIDKRealy/network-convinience-commands.git")
-		    (commit "959ad6e3ce9f03175932a94d55ce0b4ee90c07b0")))
+		    (commit "91c742a305a62edd857511ecb6b69fbf198edeb9")))
 	      (sha256
-	       (base32 "051vr2i9q1c7nccyks0p60a027wnl87pgsrp4vy7m9qdzmjhq7p2"))))
+	       (base32 "14pdi0kn71p139vx503kj70grq8938rnh2rdvrq1dw062g2q9s8p"))))
     (build-system copy-build-system)
     (arguments
      '(#:install-plan
@@ -25,4 +25,5 @@
 	 ("enet" "bin/"))))
     (home-page "https://github.com/WellIDKRealy/network-convinience-commands.git")
     (synopsis "Convenience commands for dealing with faulty network")
-    (description "Commands that are commonly run when dealing with faulty network stack")))
+    (description "Commands that are commonly run when dealing with faulty network stack")
+    (license license:gpl3)))
