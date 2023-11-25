@@ -18,9 +18,9 @@
 	    (method git-fetch)
 	    (uri (git-reference
 		  (url "https://github.com/WellIDKRealy/network-convinience-commands.git")
-		  (commit "91c742a305a62edd857511ecb6b69fbf198edeb9")))
+		  (commit "c4a4b380f70840a1f940e8a07442368fec76439b")))
 	    (sha256
-	     (base32 "0vz5mpbaqrrdh309ggbqi108423g30fgg1if8hs97hcvd31ycprv"))))
+	     (base32 "1hgpxynz4h3hpfbsav38fdh1nq9wji4ig1ic9xwm7habk8y5r2vw"))))
    (build-system copy-build-system)
    (inputs (list bash inetutils procps))
    (arguments
