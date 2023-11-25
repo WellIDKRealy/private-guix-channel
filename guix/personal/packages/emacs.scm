@@ -11,7 +11,8 @@
   #:use-module (gnu packages emacs-xyz)
   #:use-module (gnu packages compression)
   #:use-module (guix build-system emacs)
-  #:use-module (guix licenses))
+  #:use-module ((guix licenses)
+		#:prefix license:))
 
 
 (define-public comobulate
@@ -33,7 +34,7 @@
     "Combobulate is a package that adds structured editing and movement to a wide range of programming languages.
      Unlike most programming major modes that use error-prone imperative code and regular expressions to determine what's what in your code, Combobulate uses Emacs 29's tree-sitter library.")
    (home-page "https://github.com/mickeynp/combobulate")
-   (license gpl3+)))
+   (license license:gpl3+)))
 
 (define-public emacs-zoom
   (package
