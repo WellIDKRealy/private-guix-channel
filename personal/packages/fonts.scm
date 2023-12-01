@@ -18,4 +18,4 @@
    (home-page "https://int10h.org/oldschool-pc-fonts/")
    (synopsis "Old school pc fonts")
    (description "The world's biggest collection of classic text mode fonts, system fonts and BIOS fonts from DOS-era IBM PCs and compatibles - preserving raster typography from pre-GUI times")
-   (license license:gpl3+)))
+   (license license:cc-by-sa4.0)))
