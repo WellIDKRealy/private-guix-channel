@@ -1,5 +1,6 @@
 #!/usr/bin/env guile
 !#
+(chdir "personal")
 (add-to-load-path ".")
 
 (use-modules (guix packages)

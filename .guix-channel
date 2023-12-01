@@ -1,3 +1,4 @@
 (channel
  (version 0)
+ (directory "personal")
  (url "https://github.com/WellIDKRealy/private-guix-channel.git"))
